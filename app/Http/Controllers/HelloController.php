@@ -11,9 +11,11 @@ class HelloController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($name = 'Everybody')
     {
-        //
+        $data=['name'=>$name];
+        return view('hello.index',$data);
+
     }
 
     /**
